@@ -16,7 +16,9 @@ services:
     env_file: .env
     volumes:
       - static:/backend_static
-      - media:/backend_media  
+      - media:/backend_media
+    command: >
+      bash -c "./entrypoint.sh"
   frontend:
     env_file: .env
     build: ./frontend/

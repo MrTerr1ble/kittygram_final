@@ -6,4 +6,7 @@ python manage.py migrate
 echo "Collect static files"
 python manage.py collectstatic --noinput
 
+echo "Runserver"
+gunicorn --bind 0.0.0.0:9000 kittygram_backend.wsgi
+
 exec "$@"
