@@ -8,7 +8,7 @@ RUN pip install -r requirements.txt --no-cache-dir
 
 COPY . . 
 
-COPY /scripts/ /app/scripts
+COPY .scripts/entrypoint.sh /app/scripts/entrypoint.sh
 RUN chmod +x /app/scripts/entrypoint.sh
 
 CMD ["gunicorn", "--bind", "0.0.0.0:9000", "kittygram_backend.wsgi"]
