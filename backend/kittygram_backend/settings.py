@@ -1,3 +1,4 @@
+# flacke8: noqa
 import os
 from pathlib import Path
 
