@@ -18,7 +18,7 @@ services:
       - static:/backend_static
       - media:/backend_media
     command: >
-      bash -c "./entrypoint.sh"
+      bash -c "./scripts/entrypoint.sh"
   frontend:
     env_file: .env
     build: ./frontend/
