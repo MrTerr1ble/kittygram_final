@@ -13,4 +13,4 @@ COPY . .
 
 CMD ["gunicorn", "--bind", "0.0.0.0:9000", "kittygram_backend.wsgi"]
 
-ENTRYPOINT ["/bin/bash", "/app/entrypoint.sh"]
+RUN ["/app/entrypoint.sh"]
