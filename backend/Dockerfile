@@ -11,6 +11,6 @@ RUN chmod +x /app/scripts/entrypoint.sh
 
 COPY . . 
 
-# ENTRYPOINT ["/app/scripts/entrypoint.sh"]
+ENTRYPOINT ["/app/scripts/entrypoint.sh"]
 
 CMD ["gunicorn", "--bind", "0.0.0.0:9000", "kittygram_backend.wsgi"]
